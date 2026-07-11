@@ -4,6 +4,8 @@ The public product and engineering showcase for **GoodsBar**, an offline-first i
 
 **Live site:** `https://nekowings.github.io/goodsbar-showcase/` (available after the repository is published and Pages is enabled)
 
+**App Store:** [GoodsBar (international)](https://apps.apple.com/th/app/goodsbar/id6753799200?platform=vision) · [谷子吧（中国大陆）](https://apps.apple.com/cn/app/%E8%B0%B7%E5%AD%90%E5%90%A7-%E6%91%86%E6%91%8A%E8%AE%B0%E8%B4%A6%E5%BA%93%E5%AD%98%E5%B0%8F%E5%8A%A9%E6%89%8B/id6753799200)
+
 ![GoodsBar dashboard](public/screenshots/dashboard.png)
 
 ## What this site covers

@@ -12,7 +12,7 @@ export interface EngineeringHighlight { title: LocalizedCopy; description: Local
 export interface ProjectMetric { value: string; label: LocalizedCopy }
 export interface SiteCopy {
   nav: { journey: string; features: string; engineering: string; resume: string; roadmap: string };
-  hero: { eyebrow: string; title: string; description: string; explore: string; source: string; notice: string };
+  hero: { eyebrow: string; title: string; description: string; explore: string; appStore: string; source: string; notice: string };
   story: { eyebrow: string; title: string; description: string; steps: string[] };
   journey: { eyebrow: string; title: string; description: string; select: string; actions: string; engineering: string; related: string };
   features: { eyebrow: string; title: string };

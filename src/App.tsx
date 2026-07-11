@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Clipboard, Code2, Github, Globe2, Layers3, Menu, PackageCheck, Radio, Sparkles, X } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clipboard, Code2, Download, Github, Globe2, Layers3, Menu, PackageCheck, Radio, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { RouteMap } from "./components/RouteMap";
 import { copy } from "./content/copy";
@@ -12,6 +12,9 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const t = copy[locale];
+  const appStoreUrl = locale === "zh"
+    ? "https://apps.apple.com/cn/app/%E8%B0%B7%E5%AD%90%E5%90%A7-%E6%91%86%E6%91%8A%E8%AE%B0%E8%B4%A6%E5%BA%93%E5%AD%98%E5%B0%8F%E5%8A%A9%E6%89%8B/id6753799200"
+    : "https://apps.apple.com/th/app/goodsbar/id6753799200?platform=vision";
   useEffect(() => { document.documentElement.lang = locale === "zh" ? "zh-Hans" : "en"; }, [locale]);
   const handleCopy = async () => { await navigator.clipboard.writeText(t.resume.text); setCopied(true); window.setTimeout(() => setCopied(false), 1800); };
   const handleLocale = () => setLocale((value) => {
@@ -28,7 +31,7 @@ function App() {
     </header>
 
     <main id="top">
-      <section className="hero section-wrap"><div className="hero-copy"><p className="eyebrow"><Sparkles size={16}/>{t.hero.eyebrow}</p><h1>{t.hero.title}</h1><p className="hero-lead">{t.hero.description}</p><div className="hero-actions"><a className="button primary" href="#journey">{t.hero.explore}<ArrowRight size={17}/></a><a className="button secondary" href="https://github.com/NekoWings/GoodsBar" target="_blank" rel="noreferrer"><Github size={17}/>{t.hero.source}</a></div><p className="notice"><Radio size={14}/>{t.hero.notice}</p></div>
+      <section className="hero section-wrap"><div className="hero-copy"><p className="eyebrow"><Sparkles size={16}/>{t.hero.eyebrow}</p><h1>{t.hero.title}</h1><p className="hero-lead">{t.hero.description}</p><div className="hero-actions"><a className="button primary" href={appStoreUrl} target="_blank" rel="noreferrer"><Download size={17}/>{t.hero.appStore}</a><a className="button secondary" href="#journey">{t.hero.explore}<ArrowRight size={17}/></a><a className="button secondary" href="https://github.com/NekoWings/GoodsBar" target="_blank" rel="noreferrer"><Github size={17}/>{t.hero.source}</a></div><p className="notice"><Radio size={14}/>{t.hero.notice}</p></div>
         <div className="hero-visual"><div className="sun-orb"/><div className="device"><div className="device-bar"><span/><span/><span/></div><img src={`${import.meta.env.BASE_URL}screenshots/dashboard.png`} alt="GoodsBar dashboard showing sample event and inventory data"/></div><div className="floating-card card-one"><PackageCheck/><span>Offline inventory</span></div><div className="floating-card card-two"><Layers3/><span>End-to-end product</span></div></div>
       </section>
 
