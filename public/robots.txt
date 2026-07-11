@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nekowings.github.io/goodsbar-showcase/sitemap.xml
