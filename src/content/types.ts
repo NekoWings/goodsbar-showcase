@@ -14,7 +14,7 @@ export interface SiteCopy {
   nav: { journey: string; features: string; engineering: string; resume: string; roadmap: string };
   hero: { eyebrow: string; title: string; description: string; explore: string; appStore: string; source: string; notice: string };
   story: { eyebrow: string; title: string; description: string; steps: string[] };
-  journey: { eyebrow: string; title: string; description: string; select: string; actions: string; engineering: string; related: string };
+  journey: { eyebrow: string; title: string; description: string; select: string; actions: string; engineering: string; related: string; loading: string; imageError: string };
   features: { eyebrow: string; title: string };
   engineering: { eyebrow: string; title: string; description: string };
   resume: { eyebrow: string; title: string; role: string; text: string; copy: string; copied: string };
